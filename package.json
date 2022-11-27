@@ -2,6 +2,7 @@
   "name": "nats-react-ts",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
@@ -11,7 +12,6 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
     "@types/node": "^16.18.3",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
@@ -21,14 +21,14 @@
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
     "react-scripts": "5.0.1",
-    "typescript": "^4.8.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "start2": "concurrently \"react-scripts start\" \"chmod +x ./nats-server -c server.conf $SHELL\" ",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test2": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
     "custom2": "concurrently \"react-scripts build\" \"chmod +x ./myScript.sh\" ",
     "custom": "concurrently \"react-scripts build\" \"chmod +x ./nats-server.exe -c server.conf\" "
@@ -50,5 +50,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/jest": "^29.2.3",
+    "jest": "^29.3.1",
+    "ts-jest": "^29.0.3",
+    "typescript": "^4.9.3"
   }
 }
